@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Starbucks Website landing page</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -10,7 +11,8 @@
         <div class="circle"></div>
         <header>
             <a href ="#" class="logo"><img src="logo.png"></a>
-            <ul>
+            <div class="toggle" onclick="toggleMenu();"></div>
+            <ul class="navigation">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Menu</a></li>
                 <li><a href="#">What's new</a></li>
@@ -18,6 +20,7 @@
             </ul>
         </header>
         <div class="content">
+            
             <div class="textBox">
                 <h2>It's not just Coffee<br>It's <span>Starbucks</span></h2>
                 <p>Lorem ipsum dolor sit amt, consectetur adipisicing elit, sed do eiusmod
@@ -34,6 +37,7 @@
             </div>
 
             <ul class="thumb">
+                
                 <li><img src="thumb1.png" onclick="imgSlider('img1.png');changeCircleColor('#017143')"></li>
                 <li><img src="thumb2.png" onclick="imgSlider('img2.png');changeCircleColor('#eb7495')"></li>
                 <li><img src="thumb3.png" onclick="imgSlider('img3.png');changeCircleColor('#d752b1')"></li>
@@ -53,6 +57,13 @@
          function changeCircleColor(color){
            const circle = document.querySelector('.circle');
            circle.style.background = color;
+         }
+
+         function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+            var navigation = document.querySelector('.navigation')
+            menuToggle.classList.toggle('active')
+            menuToggle.classList.toggle('active')
          }
      </script>
 
